@@ -1,0 +1,6 @@
+.idea
+.vscode
+desktop.ini
+
+__pycache__/
+*.py[cod]
