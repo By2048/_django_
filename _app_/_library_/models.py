@@ -1,12 +1,11 @@
-from datetime import datetime
-
 from django.db import models
+from django.utils import timezone
 
 
 class Book(models.Model):
     title = models.CharField(max_length=30, verbose_name="图书名")
-    create_date = models.DateTimeField(default=datetime.now, verbose_name="创建时间")
-    update_date = models.DateTimeField(default=datetime.now, verbose_name="修改时间")
+    create_date = models.DateTimeField(default=timezone.now, verbose_name="创建时间")
+    update_date = models.DateTimeField(default=timezone.now, verbose_name="修改时间")
 
     class Meta:
         db_table = 'db_book'
